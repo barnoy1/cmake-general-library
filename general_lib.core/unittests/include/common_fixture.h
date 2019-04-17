@@ -19,10 +19,10 @@ protected:
 		// You can do set-up work for each test here.
 		json j = configuration::get_instance()->get_json_config();
 
-		std::string s = j["size"];
+		std::string file_name = j["file_name"];
 
-		properties.file_name = s.c_str();
-		properties.counter = 1;
+		properties.file_name = file_name.c_str();
+		properties.counter = j["counter"];
 
 		obj_ptr = std::make_unique<core::general_lib>(properties);
 	}

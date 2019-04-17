@@ -13,12 +13,11 @@ int main(int argc, char **argv) {
   
   testing::InitGoogleTest(&argc, argv);
 
-  std::string path = "D:/Repo/cmake-general-library/build/bin/Debug/example.json";
-
-  std::ifstream input_file(path.c_str());
+ 
   
   json j;
-  input_file >> j;
+  j["file_name"] = "data.txt";
+  j["counter"] = 1;
 
   configuration::get_instance()->set_configuration_file(j);  
   return RUN_ALL_TESTS();

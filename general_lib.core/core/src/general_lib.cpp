@@ -12,7 +12,10 @@
 
 namespace core
 {
-	general_lib::general_lib(const core::properties& properties)
+	general_lib::general_lib(const core::properties& properties) :
+		buffer_ready_callback_ { nullptr },
+		resource_ { nullptr },
+		settings_ { nullptr }
 	{		
 		configure(properties);		
 	}

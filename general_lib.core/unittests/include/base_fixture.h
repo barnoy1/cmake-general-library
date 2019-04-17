@@ -18,10 +18,11 @@ class base_fixture : public ::testing::Test
 		{
 			json j = configuration::get_instance()->get_json_config();
 
-			// even easier with structured bindings (C++17)
+			// needed to compile with (C++17)
 			for (const auto&[key, value] : j.items()) {
 				std::cout << key << " : " << value << "\n";
 			}
+
 		}
 
 		virtual ~base_fixture()
