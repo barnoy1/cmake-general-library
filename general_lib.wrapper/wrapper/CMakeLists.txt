@@ -1,6 +1,6 @@
 include (CSharpUtilities)
 
-add_library (${LIBRARY_CSHARP_NAME}
+add_library (${LIBRARY_CSHARP_NAME} ${LIBRARY_TYPE}
 	GeneralLibWrapper.cs
 	Configuration.cs	
 	Properties/AssemblyInfo.cs

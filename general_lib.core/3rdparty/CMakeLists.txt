@@ -17,7 +17,7 @@ set_target_properties (gtest PROPERTIES FOLDER ${CMAKE_PROJECT_NAME}/${LIBRARY_N
 option(Boost_Enable "build solution with boost libraries" ON)
 if (Boost_Enable)
 	if (NOT DEFINED BOOST_ROOT_PATH)
-		set (BOOST_ROOT_PATH "C:/local/boost_1_68_0" CACHE STRING "boost root directory path" FORCE)
+		set (BOOST_ROOT_PATH "C:/local/boost_1_70_0" CACHE STRING "boost root directory path" FORCE)
 	endif()
 
 	set (BOOST_ROOT ${BOOST_ROOT_PATH} CACHE STRING "boot root directory" FORCE)

@@ -32,6 +32,7 @@ set (INTERNAL_HEADERS
 # set libarary type
 if (BUILD_TARGET_LIBRARY_TYPE_AS_SHARED)
 	set (LIBRARY_TYPE SHARED)
+	set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 else()
 	set (LIBRARY_TYPE STATIC)
 endif()

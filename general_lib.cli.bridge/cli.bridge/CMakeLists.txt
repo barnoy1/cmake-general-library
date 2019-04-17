@@ -15,7 +15,7 @@ set (HEADERS_CLI
 )
 
 # set cli flags
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /clr /EHa")
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHa")
 if (CMAKE_CXX_FLAGS_DEBUG MATCHES "/RTC1")
 	string (REPLACE "/EHsc" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 	string (REPLACE "/RTC1" "" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
@@ -26,6 +26,9 @@ add_library (${LIBRARY_BRIDGE_CLI_NAME} ${LIBRARY_TYPE}
 	${SOURCES_CLI}
 	${HEADERS_CLI}
 )
+
+set_property (TARGET ${LIBRARY_BRIDGE_CLI_NAME} PROPERTY COMMON_LANGUAGE_RUNTIME "")
+
 
 # define include directories for target
 target_include_directories (${LIBRARY_BRIDGE_CLI_NAME}
