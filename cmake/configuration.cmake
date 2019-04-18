@@ -56,7 +56,10 @@ set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+# build target as shared lib so the static gtest library need to be shared as well in order to link correctly
 option (BUILD_TARGET_LIBRARY_TYPE_AS_SHARED "build target as shared" ON)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
 option (BUILD_TESTS "build unittests" ON)
 
 

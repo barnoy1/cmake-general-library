@@ -17,6 +17,8 @@ endif()
 
 option (BUILD_TESTS "build gtests as part of solution" ON)
 
+set (CMAKE_VERSION ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} CACHE STRING "current cmake version" FORCE)
+
 if (MSVC)
 	
 	# adding compiler definitions and flags
@@ -48,17 +50,18 @@ if (NOT DEFINED DOTNET_TARGET_FRAMEWORK_VERSION)
 	set (DOTNET_TARGET_FRAMEWORK_VERSION "v4.5.1" CACHE STRING ".NET framework version" FORCE)
 endif()
 
-message("")
-message(STATUS "---------------------------------")
-message(STATUS "COMPILER INFO: ")
-message(STATUS "	CMAKE_PROJECT_NAME: ${CMAKE_PROJECT_NAME}")
-message(STATUS "	ARCHITECTURE: ${ARCH}")
-message(STATUS "	CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
-message(STATUS "	CHECK_CXX_COMPILER_FLAG: ${_cpp_latest_flag_supported}")
-message(STATUS "	CMAKE_CXX_FLAGS_DEBUG: ${CMAKE_CXX_FLAGS_DEBUG}")
-message(STATUS "	DOTNET_TARGET_FRAMEWORK_VERSION: ${DOTNET_TARGET_FRAMEWORK_VERSION}")
-message(STATUS "	PROJECT_BINARY_DIRECTORY: ${PROJECT_BINARY_DIR}")
-message("")
+message ("")
+message (STATUS "---------------------------------")
+message (STATUS "COMPILER INFO: ")
+message (STATUS "	CMAKE_PROJECT_NAME: ${CMAKE_PROJECT_NAME}")
+message (STATUS "	CMAKE_VERSION: ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}")
+message (STATUS "	ARCHITECTURE: ${ARCH}")
+message (STATUS "	CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
+message (STATUS "	CHECK_CXX_COMPILER_FLAG: ${_cpp_latest_flag_supported}")
+message (STATUS "	CMAKE_CXX_FLAGS_DEBUG: ${CMAKE_CXX_FLAGS_DEBUG}")
+message (STATUS "	DOTNET_TARGET_FRAMEWORK_VERSION: ${DOTNET_TARGET_FRAMEWORK_VERSION}")
+message (STATUS "	PROJECT_BINARY_DIRECTORY: ${PROJECT_BINARY_DIR}")
+message ("")
 
 
 

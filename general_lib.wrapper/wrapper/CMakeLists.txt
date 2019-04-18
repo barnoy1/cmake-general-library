@@ -1,9 +1,10 @@
 include (CSharpUtilities)
 
-add_library (${LIBRARY_CSHARP_NAME} ${LIBRARY_TYPE}
-	GeneralLibWrapper.cs
-	Configuration.cs	
-	Properties/AssemblyInfo.cs
+add_library (${LIBRARY_CSHARP_NAME} 
+	${LIBRARY_TYPE}
+		GeneralLibWrapper.cs
+		Configuration.cs	
+		Properties/AssemblyInfo.cs
 )
 	
 csharp_set_designer_cs_properties(
