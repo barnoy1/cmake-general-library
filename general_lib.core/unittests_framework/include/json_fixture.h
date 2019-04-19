@@ -5,16 +5,15 @@
 #include <iostream>
 #include "gtest/gtest.h"
 
-#include "general_lib.h"
 #include "test_configuration.h"
 
-// The fixture for testing class Project1. From google test primer.
-class base_fixture : public ::testing::Test
+// The fixture for testing class Project1. From goggle test primer.
+class json_fixture : public ::testing::Test
 {
 	
 	protected:
 
-		base_fixture()
+		json_fixture()
 		{
 			json j = configuration::get_instance()->get_json_config();
 
@@ -25,7 +24,7 @@ class base_fixture : public ::testing::Test
 
 		}
 
-		virtual ~base_fixture()
+		virtual ~json_fixture()
 		{
 	
 		}

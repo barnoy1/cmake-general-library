@@ -71,16 +71,15 @@ generate_export_header(${LIBRARY_NAME}
 
 message("")
 message(STATUS "---------------------------------")
-message(STATUS "generated export header")
+message(STATUS "core library generated export header")
 message(STATUS "	EXPORT_FILE_NAME: ${GENERATED_HEADERS}/${EXPORT_FILE_NAME}")
 message(STATUS "	EXPORT_MACRO_NAME: ${EXPORT_MACRO_NAME}")
 message("")
 
-
-
 ############################################
 # define target interface and include dirs
 ############################################
+
 
 # set include directories
 target_include_directories(${LIBRARY_NAME}

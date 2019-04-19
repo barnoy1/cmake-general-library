@@ -5,9 +5,18 @@
 #include <memory>
 #include "json.hpp"
 
+#include "unittests_framework_EXPORT.h"
+
 using json = nlohmann::json;
 
-class configuration
+
+// enable C / C++ linkage
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+class UNITTESTS_FRAMEWORK_EXPORT configuration
 {
 
 public:
@@ -29,6 +38,11 @@ private:
 
 	json conf_file_;
 };
+
+
+#ifdef __cplusplus
+}
+#endif
 
 
 #endif // !__TEST_CONFIGURATION__

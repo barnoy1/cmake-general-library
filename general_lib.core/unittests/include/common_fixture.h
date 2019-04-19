@@ -2,10 +2,10 @@
 #ifndef __COMMON_FIXTURE__
 #define __COMMON_FIXTURE__
 
-#include "base_fixture.h"
-
-// The fixture for testing class Project1. From google test primer.
-class common_fixture : public ::base_fixture
+#include "json_fixture.h"
+#include "general_lib.h"
+// The fixture for testing class Project1. From goggle test primer.
+class common_fixture : public ::json_fixture
 {
 protected:
 	// You can remove any or all of the following functions if its body

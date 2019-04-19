@@ -3,8 +3,7 @@
 #include <fstream>
 
 #include "gtest/gtest.h"
-#include "general_lib.h"
-#include "base_fixture.h"
+#include "json_fixture.h"
 #include "test_configuration.h"
 
 

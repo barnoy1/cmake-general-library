@@ -26,5 +26,6 @@ add_subdirectory (sample)
 ############################################
 
 if (BUILD_TESTS)
+	add_subdirectory (unittests_framework)
 	add_subdirectory (unittests)
 endif()
