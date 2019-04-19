@@ -10,7 +10,6 @@ set (UNITTEST_FW_LIBRARY unittests_framework)
 # set sources
 set (UNITTEST_FWS_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set (UNITTEST_FWS_SOURCE
-	${UNITTEST_FWS_SOURCE_DIR}/main.cpp
 	${UNITTEST_FWS_SOURCE_DIR}/test_configuration.cpp
 )
 

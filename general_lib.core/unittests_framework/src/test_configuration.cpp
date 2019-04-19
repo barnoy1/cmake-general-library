@@ -17,12 +17,14 @@ std::unique_ptr<configuration>& configuration::get_instance()
 	return instance_;
 }
 
-void configuration::set_configuration_file(json j)
+void configuration::set_configuration_file(std::string)
 {
-	conf_file_ = j;
+	configuration::get_instance()->config_json = {};
+	config_json["file_name"] = "file.txt";
+	config_json["counter"] = 1;
 }
 
 const json configuration::get_json_config() const
 {
-	return conf_file_;
+	return config_json;
 }

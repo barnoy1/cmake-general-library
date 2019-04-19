@@ -16,13 +16,9 @@ protected:
 	
 	common_fixture()
 	{
-		// You can do set-up work for each test here.
-		json j = configuration::get_instance()->get_json_config();
-
-		std::string file_name = j["file_name"];
-
+		std::string file_name = configuration::get_instance()->config_json["file_name"];
 		properties.file_name = file_name.c_str();
-		properties.counter = j["counter"];
+		properties.counter = configuration::get_instance()->config_json["counter"];
 
 		obj_ptr = std::make_unique<core::general_lib>(properties);
 	}

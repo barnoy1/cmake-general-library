@@ -11,13 +11,6 @@ int main(int argc, char **argv) {
   std::cout << "Executing tests\n";
   
   testing::InitGoogleTest(&argc, argv);
-
- 
-  
-  json j;
-  j["file_name"] = "data.txt";
-  j["counter"] = 1;
-
-  configuration::get_instance()->set_configuration_file(j);  
+  configuration::get_instance()->set_configuration_file("path/to/json");  
   return RUN_ALL_TESTS();
 }

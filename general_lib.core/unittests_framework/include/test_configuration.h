@@ -23,8 +23,9 @@ public:
 	
 	// static access method.
 	static std::unique_ptr<configuration>& get_instance();
+	json config_json;
 
-	void set_configuration_file(json j);
+	void set_configuration_file(std::string);
 
 	// const member function that return const json file
 	const json get_json_config() const;
@@ -35,8 +36,6 @@ private:
 
 	// private constructor to prevent instancing.
 	configuration() {};
-
-	json conf_file_;
 };
 
 

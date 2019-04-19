@@ -7,6 +7,7 @@ set (UNITTEST_TARGET runUnitTests)
  
 # Collect application sources
 set (UNITTESTS_SOURCE
+	${UNITTESTS_SOURCE_DIR}/main.cpp
 	${UNITTESTS_SOURCE_DIR}/common_unittests.cpp
 )
 
