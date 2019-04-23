@@ -5,7 +5,7 @@
 #include <iostream>
 #include "gtest/gtest.h"
 
-#include "test_configuration.h"
+#include "unittest_core.h"
 
 // The fixture for testing class Project1. From goggle test primer.
 class json_fixture : public ::testing::Test
@@ -15,7 +15,7 @@ class json_fixture : public ::testing::Test
 
 		json_fixture()
 		{
-			json j = configuration::get_instance()->get_json_config();
+			json j = unittest_core::configuration_json;
 
 			// needed to compile with (C++17)
 			for (const auto&[key, value] : j.items()) {

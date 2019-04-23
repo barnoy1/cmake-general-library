@@ -10,14 +10,14 @@ set (UNITTEST_FW_LIBRARY unittests_framework)
 # set sources
 set (UNITTEST_FWS_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set (UNITTEST_FWS_SOURCE
-	${UNITTEST_FWS_SOURCE_DIR}/test_configuration.cpp
+	${UNITTEST_FWS_SOURCE_DIR}/unittest_core.cpp
 )
 
 # define public headers
 set (UNITTEST_FWS_INCLUDE_DIR  ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set (UNITTEST_FWS_HEADERS
 	${UNITTEST_FWS_INCLUDE_DIR}/json_fixture.h
-	${UNITTEST_FWS_INCLUDE_DIR}/test_configuration.h
+	${UNITTEST_FWS_INCLUDE_DIR}/unittest_core.h
 	${JSON_INCLUDE_DIRS}/json.hpp
 )
 

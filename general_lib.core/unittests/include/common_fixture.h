@@ -16,9 +16,9 @@ protected:
 	
 	common_fixture()
 	{
-		std::string file_name = configuration::get_instance()->config_json["file_name"];
-		properties.file_name = file_name.c_str();
-		properties.counter = configuration::get_instance()->config_json["counter"];
+		std::string s = unittest_core::configuration_json["file_name"];
+		properties.file_name = s.c_str();
+		properties.counter = unittest_core::configuration_json["counter"];
 
 		obj_ptr = std::make_unique<core::general_lib>(properties);
 	}
